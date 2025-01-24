@@ -25,7 +25,7 @@ This project includes a Python backend and a static frontend. The backend and fr
 2. **Build and start the Docker containers**:
 
    ```bash
-   docker-compose up --build
+   docker compose up --build
    ```
 
 ## Usage
