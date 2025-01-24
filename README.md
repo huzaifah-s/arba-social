@@ -31,4 +31,4 @@ This project includes a Python backend and a static frontend. The backend and fr
 ## Usage
 
 - The frontend should be accessible from your web browser at `http://localhost:5001` (or another port specified in the `docker-compose.yml`).
-- The backend API is typically accessible at `http://localhost:8080` (or another port specified in the `docker-compose.yml`).
+- The backend API is typically accessible at `http://localhost:8642` (or another port specified in the `docker-compose.yml`).
