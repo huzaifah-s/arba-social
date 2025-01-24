@@ -11,7 +11,7 @@ services:
   frontend:
     build: ./frontend
     ports:
-      - "8080:80"
+      - "8642:80"
     volumes:
       - ./frontend:/usr/share/nginx/html    # Frontend live updates
     container_name: nginx-frontend
