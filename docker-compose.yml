@@ -1,0 +1,19 @@
+version: '3'
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "5001:5001"
+    volumes:
+      - ./backend:/run    # This mounts your local code to container
+    container_name: python-backend
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "80:80"
+    volumes:
+      - ./frontend:/usr/share/nginx/html    # Frontend live updates
+    container_name: nginx-frontend
+    depends_on:
+      - backend

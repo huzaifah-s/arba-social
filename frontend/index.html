@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Auth Forms -->
+        <div id="auth-section">
+            <div class="auth-tabs">
+                <button onclick="showLogin()">Login</button>
+                <button onclick="showRegister()">Register</button>
+            </div>
+
+            <!-- Login Form -->
+            <div id="login-form" class="auth-form">
+                <h2>Login</h2>
+                <form onsubmit="handleLogin(event)">
+                    <input type="email" id="login-email" placeholder="Email" required>
+                    <input type="password" id="login-password" placeholder="Password" required>
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+
+            <!-- Register Form -->
+            <div id="register-form" class="auth-form" style="display: none;">
+                <h2>Register</h2>
+                <form onsubmit="handleRegister(event)">
+                    <input type="email" id="register-email" placeholder="Email" required>
+                    <input type="password" id="register-password" placeholder="Password" required>
+                    <input type="text" id="register-name" placeholder="Name" required>
+                    <button type="submit">Register</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Main Content (hidden until logged in) -->
+        <div id="main-content" style="display: none;">
+            <div class="header">
+                <h1>ARBA Social</h1>
+                <button id="logout-btn" onclick="handleLogout()">⏻</button> <!-- Update this line -->
+            </div>
+            <div class="posts-header"> <!-- Add this div for better layout -->
+                <button id="add-post-btn" onclick="showAddPostModal()">✍🏼 Add Post</button>
+            </div>
+            <div id="posts-section">
+                <!-- Posts will be loaded here -->
+            </div>
+        </div>
+
+
+
+        <!-- Edit Post Modal -->
+        <div id="edit-post-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Add/Edit Post</h2>
+                <form onsubmit="handleEditPost(event)">
+                    <input type="hidden" id="edit-post-id">
+                    <input type="text" id="edit-image-url" placeholder="Image URL" required>
+                    <textarea id="edit-caption" placeholder="Write your caption..." required></textarea>
+                    <button type="submit">Save Changes</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

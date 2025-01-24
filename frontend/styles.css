@@ -1,0 +1,418 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f2f5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Auth Section */
+.auth-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.auth-tabs button {
+    padding: 10px 20px;
+    background-color: #000;
+    border: none;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.auth-tabs button:hover {
+    background-color: #3d3d3d;
+}
+
+.auth-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.auth-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.auth-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.auth-form input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #1877f2;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #166fe5;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between; /* Spread items to both sides */
+    align-items: center; /* Center vertically */
+    padding: 10px 15px; /* Padding for header */
+    background-color: #f5f5f5; /* Optional background color */
+    max-width: 500px; /* Set max width */
+    margin: 0 auto; /* Center horizontally */
+}
+
+#logout-btn {
+    padding: 10px 15px; /* Same padding as other buttons */
+    background-color: #dc3545; /* Smooth red color for logout */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+#logout-btn:hover {
+    background-color: #c82333; /* Darker red on hover */
+}
+
+.posts-header {
+    display: flex;
+    justify-content: flex-end; /* Align 'Add Post' button to the right */
+    max-width: 500px; /* Set max width */
+    margin: 0 auto; /* Center horizontally */
+}
+
+#add-post-btn {
+    padding: 10px 0px;
+    background-color: #000; /* Green color */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+#add-post-btn:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+/* Main Content */
+#posts-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Post Styles */
+.post {
+    width: 500px; /* Fixed width */
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #ddd;
+}
+
+.post-header h4 {
+    font-size: 16px;
+    color: #333;
+}
+
+.post-image {
+    width: 100%;
+    height: 500px; /* Square format */
+    object-fit: cover;
+}
+
+.post-caption {
+    padding: 16px 16px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    line-height: 1.5;
+    background-color: #fafafa; /* Subtle gray background */
+    border-top: 1px solid #ddd;
+}
+
+/* Post Actions */
+.post-actions {
+    display: flex;
+    justify-content: flex-end; /* Align buttons to the right */
+    gap: 10px;
+    padding: 10px 15px;
+    background-color: #f8f9fa;
+    border-top: 1px solid #ddd;
+}
+
+.post-actions button {
+    font-size: 14px;
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Edit Button */
+.post-actions .edit-btn {
+    background-color: #ffc107;
+    color: #fff;
+}
+
+.post-actions .edit-btn:hover {
+    background-color: #e0a800;
+}
+
+/* Delete Button */
+.post-actions .delete-btn {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.post-actions .delete-btn:hover {
+    background-color: #c82333;
+}
+
+/* Comments Section */
+.comments-section {
+    padding: 15px;
+    border-top: 1px solid #ddd;
+    background-color: #fafafa;
+}
+
+.comments-section h3 {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.add-comment {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    align-items: center; /* Align input and button vertically */
+}
+
+.add-comment input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    font-size: 14px;
+}
+
+.add-comment button {
+    padding: 8px 16px;
+    background-color: #28a745; /* Green for Add Comment */
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.add-comment button:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+.comments-list {
+    margin-top: 10px; /* Give space above comments */
+}
+
+.comments-list .comment {
+    background-color: #00000000; /* Smooth white background for comments */
+    padding: 8px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Align text and buttons to center */
+    font-size: 14px; /* Set comment text to a smaller size */
+}
+
+.comment-left {
+    display: flex;
+    flex-direction: column; /* Stack name and text */
+}
+
+.comment-author {
+    font-size: 12px;  /* Smaller font size for the author name */
+    font-weight: bold; /* Bold text for the author name */
+    margin-bottom: 2px; /* Space between name and text */
+}
+
+.comment-text {
+    font-size: 14px; /* Maintain original font size for comment text if needed */
+}
+
+.comment-actions {
+    display: flex;
+    gap: 4px; /* Space between edit and delete buttons */
+}
+
+.comment-actions button {
+    padding: 4px 8px;
+    font-size: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the icon in button */
+}
+
+.comment-actions .edit-btn {
+    background-color: #f7f7f7; /* Very smooth grey for edit */
+    color: #555; /* Darker text for contrast */
+}
+
+.comment-actions .edit-btn:hover {
+    background-color: #e0e0e0; /* Slightly darker grey on hover */
+}
+
+.comment-actions .delete-btn {
+    background-color: #fdecec; /* Very smooth red for delete */
+    color: #c00; /* Subtle red text color */
+}
+
+.comment-actions .delete-btn:hover {
+    background-color: #f6d2d2; /* Slightly darker red on hover */
+}
+
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 30px 20px;
+    border-radius: 12px; /* Rounded modals */
+    width: 400px; /* Fixed width */
+    max-width: 95%;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content h2 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.modal-content input,
+.modal-content textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    resize: none;
+}
+
+.modal-content button {
+    background-color: #1877f2; /* Blue for save */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.modal-content button:hover {
+    background-color: #145dbf; /* Darker blue */
+}
+
+.close {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #888;
+}
+
+.close:hover {
+    color: #555;
+}
+
+#add-post-btn {
+    padding: 10px 20px;
+    background-color: #000; /* Green color */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 20px 0 10px 0; /* Spacing above and below the button */
+    transition: background-color 0.3s;
+}
+
+#add-post-btn:hover {
+    background-color: #393939; /* Darker green on hover */
+}
