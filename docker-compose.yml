@@ -1,19 +1,21 @@
 version: '3'
 services:
   backend:
-    build: ./backend
+    build:
+      context: ./backend  # Ensures that the Dockerfile in the backend folder is used
     ports:
-      - "5001:5001"
+      - "5001:5001"  # Maps container port 5001 to host port 5001
     volumes:
-      - ./backend:/run    # This mounts your local code to container
+      - ./backend:/run  # Mounting local backend folder to /run in the container
     container_name: python-backend
 
   frontend:
-    build: ./frontend
+    image: nginx:alpine  # Use predefined Nginx image
     ports:
-      - "8642:80"
+      - "8642:80"  # Maps container port 80 to host port 8642
     volumes:
-      - ./frontend:/usr/share/nginx/html    # Frontend live updates
+      - ./frontend:/usr/share/nginx/html  # Ensures your frontend files are accessible
+      - ./nginx.conf:/etc/nginx/nginx.conf  # Correctly mapping custom Nginx config
     container_name: nginx-frontend
     depends_on:
       - backend
