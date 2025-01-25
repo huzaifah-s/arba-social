@@ -10,7 +10,9 @@ services:
     container_name: python-backend
 
   frontend:
-    image: nginx:alpine
+    build: 
+      context: ./frontend
+      dockerfile: Dockerfile
     ports:
       - "8642:80"
     volumes:
