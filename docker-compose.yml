@@ -16,6 +16,7 @@ services:
     volumes:
       - ./frontend:/usr/share/nginx/html
       - ./nginx_conf:/etc/nginx/
+      - ./nginx_conf/mime.types:/etc/nginx/mime.types:ro
     container_name: nginx-frontend
     depends_on:
       - backend
