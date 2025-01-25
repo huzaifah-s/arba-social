@@ -94,6 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+// Load all posts function
 async function loadPosts() {
     try {
         const response = await fetch(`${API_URL}/api/posts`);
@@ -144,6 +145,7 @@ async function loadPosts() {
     }
 }
 
+// Create a post function
 async function handleCreatePost(event) {
     event.preventDefault();
     const imageUrl = document.getElementById('post-image-url').value;
@@ -174,6 +176,7 @@ async function handleCreatePost(event) {
     }
 }
 
+// Edit a post function
 async function handleEditPost(event) {
     event.preventDefault();
     const postId = document.getElementById('edit-post-id').value;
@@ -216,6 +219,7 @@ async function handleEditPost(event) {
     }
 }
 
+// Delete a post function
 async function handleDeletePost(postId) {
     if (confirm('Are you sure you want to delete this post?')) {
         try {
@@ -253,7 +257,6 @@ function showEditModal(postId, imageUrl, caption) {
     
     modal.style.display = 'block';
 }
-
 
 function closeEditModal() {
     const modal = document.getElementById('edit-post-modal');
