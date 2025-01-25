@@ -15,7 +15,7 @@ services:
       - "8642:80"
     volumes:
       - ./frontend:/usr/share/nginx/html
-      - ./nginx.conf:/etc/nginx/nginx.conf
+      - ./nginx_conf:/etc/nginx/
     container_name: nginx-frontend
     depends_on:
       - backend
